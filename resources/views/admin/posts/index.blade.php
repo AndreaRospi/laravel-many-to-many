@@ -18,6 +18,7 @@
                             <th scope="col">Titolo</th>
                             <th scope="col">Slug</th>
                             <th scope="col">State</th>
+                            <th scope="col">Categoria</th>
                             <th scope="col">Azioni</th>
                           </tr>
                         </thead>
@@ -43,11 +44,11 @@
                                     </td>
                                     <td>
                                         <a href="{{route("posts.show",$post->id)}}"><button type="button" class="btn btn-primary">Visualizza</button></a>
-                                        <a href="{{route("posts.edit",$post->id)}}"><button type="button" class="btn btn-warning">Modifica</button></a>
+                                        <a href="{{route("posts.edit",$post->id)}}"><button type="button" class="btn btn-warning my-3">Modifica</button></a>
                                         <form action="{{route('posts.destroy', $post->id)}}" method="POST">
                                             @csrf
                                             @method("DELETE")
-                                            <button type="submit" class="btn btn-danger my-3">Elimina</button>
+                                            <button type="submit" class="btn btn-danger ">Elimina</button>
                                         </form>
                                     </td>
                                 </tr>
